@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Store</title>
+  <link
+href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+rel="stylesheet"
+/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+   
+<nav class="navbar">
+
+  <!-- Logo -->
+  <div class="logo">
+    AKURA STORE
+  </div>
+
+  <!-- Search -->
+  <div class="search-box">
+  <input type="text" id="searchInput" placeholder="Cari produk...">
+
+  <button>
+    <i class="ri-search-line"></i>
+  </button>
+</div>
+
+  <!-- Icons -->
+  <div class="nav-icons">
+
+    <a href="login.html" class="nav-icon">
+      <i class="ri-user-3-line"></i>
+    </a>
+
+    <div class="nav-icon wishlist-menu" onclick="toggleWishlist()">
+
+  <i class="ri-heart-3-line"></i>
+
+  <span class="cart-count" id="wishlist-count">
+    0
+  </span>
+
+</div>
+
+    <div class="nav-icon cart-menu" onclick="toggleCart()">
+      <i class="ri-shopping-cart-2-line"></i>
+      <span class="cart-count" id="cart-count">0</span>
+    </div>
+
+  </div>
+</nav>
+
+<!-- MENU KATEGORI -->
+<div class="category-menu">
+  <a href="#">NEW ARRIVALS</a>
+  <a href="#">EKSKLUSIF</a>
+  <a href="#">BRANDS</a>
+  <a href="#" class="sale">SALE</a>
+</div>
+
+  <!-- Hero Slider -->
+  <header class="hero-slider">
+    <div class="slides">
+      <img src="https://i.pinimg.com/736x/c3/95/01/c39501bdac89d06b20ff182cbee8cbf1.jpg" alt="Nike" class="slide active">
+      <img src="https://i.pinimg.com/736x/ae/94/25/ae9425b7d62e1dc7fa3f5f03eda3507e.jpg" alt="Fashion" class="slide">
+      <img src="https://i.pinimg.com/1200x/7e/23/1d/7e231d01404f46e1c8fc6e0e336f23a6.jpg" alt="Brand Store" class="slide">
+      <img src="https://i.pinimg.com/1200x/94/e5/96/94e596acc71e52c35db22c2043fd77d5.jpg" alt="Adidas" class="slide">
+    </div>
+  </header>
+
+  <!-- REKOMENDASI -->
+<section class="recommend-section">
+
+  <div class="section-header">
+
+    <h2>DIREKOMENDASIKAN UNTUK ANDA</h2>
+
+    <div class="slider-icons">
+      <i class="ri-arrow-left-s-line"></i>
+      <i class="ri-arrow-right-s-line"></i>
+    </div>
+
+  </div>
+
+  <div id="brand-container" class="recommend-grid"></div>
+
+</section>
+
+<!-- OVERLAY CART -->
+<div class="overlay" id="overlay">
+
+  <div class="cart-modal">
+
+    <div class="cart-header">
+
+      <h2>Keranjang Saya</h2>
+
+      <button class="close-btn" onclick="toggleCart()">
+        X
+      </button>
+
+    </div>
+
+    <div id="cart-items"></div>
+
+    <!-- TOTAL -->
+    <div class="cart-summary">
+
+      <h3 id="cart-total-items">
+        Total Item: 0
+      </h3>
+
+      <h2 id="cart-total-price">
+        Total: Rp 0
+      </h2>
+
+      <!-- PAYMENT -->
+      <select id="payment-method">
+
+        <option value="">
+          Pilih Pembayaran
+        </option>
+
+        <option>DANA</option>
+        <option>OVO</option>
+        <option>GoPay</option>
+        <option>Bank Transfer</option>
+
+      </select>
+
+      <button class="checkout-btn"
+      onclick="checkout()">
+        CHECKOUT
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- OVERLAY WISHLIST -->
+<div class="overlay" id="wishlist-overlay">
+
+  <div class="cart-modal">
+
+    <div class="cart-header">
+
+      <h2>Wishlist Saya</h2>
+
+      <button class="close-btn"
+      onclick="toggleWishlist()">
+        X
+      </button>
+
+    </div>
+
+    <div id="wishlist-items"></div>
+
+    <div class="cart-summary">
+
+      <h3 id="wishlist-total">
+        Total Wishlist: 0 Produk
+      </h3>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+
+  <h2>AKURA STORE</h2>
+
+  <p>
+    © 2024 Akura Store. All rights reserved.
+  </p>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
